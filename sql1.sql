@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS L1_TESTS (
     subject_id VARCHAR(20) NOT NULL,
     date DATE NOT NULL,
     time TIME NOT NULL,
-    total_marks NUMERIC(10, 2),
+    total_marks NUMERIC(10, 2) NOT NULL DEFAULT 0,
     CONSTRAINT fk_subject_id_tests FOREIGN KEY(subject_id) REFERENCES L1_SUBJECTS(subject_id),
     UNIQUE (test_code, subject_id),
     UNIQUE (subject_id, date, time)
