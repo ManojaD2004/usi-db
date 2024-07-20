@@ -263,16 +263,6 @@ VALUES
     ('IA_1', 'BCS403_02', '2024-07-17', '9:00:00', 50);
 
 -- Attendance
-CREATE TABLE
-    IF NOT EXISTS L1_STUDENTS_ATTEND (
-        class_id INT NOT NULL,
-        usn VARCHAR(30) NOT NULL,
-        attendance BOOLEAN NOT NULL,
-        CONSTRAINT fk_usn_attend FOREIGN KEY (usn) REFERENCES L1_STUDENTS (usn),
-        CONSTRAINT fk_class_id_attend FOREIGN KEY (class_id) REFERENCES L1_CLASSES (class_id),
-        PRIMARY KEY (class_id, usn)
-    );
-
 -- DBMS_01
 INSERT INTO
     L1_STUDENTS_ATTEND (class_id, usn, attendance)
@@ -340,3 +330,206 @@ VALUES
     (8, '1MP22CS042', TRUE),
     (8, '1MP22CS008', TRUE),
     (8, '1MP22CS013', TRUE);
+
+-- MC_01
+INSERT INTO
+    L1_STUDENTS_ATTEND (class_id, usn, attendance)
+VALUES
+    (14, '1MP22CS031', TRUE),
+    (14, '1MP22CS060', TRUE),
+    (14, '1MP22CS003', TRUE),
+    (14, '1MP22CS039', TRUE),
+    (14, '1MP22CS029', TRUE),
+    (14, '1MP22CS032', TRUE),
+    (14, '1MP22CS042', TRUE),
+    (14, '1MP22CS008', TRUE),
+    (14, '1MP22CS013', TRUE),
+    (15, '1MP22CS031', FALSE),
+    (15, '1MP22CS060', TRUE),
+    (15, '1MP22CS003', FALSE),
+    (15, '1MP22CS039', TRUE),
+    (15, '1MP22CS029', TRUE),
+    (15, '1MP22CS032', TRUE),
+    (15, '1MP22CS042', FALSE),
+    (15, '1MP22CS008', TRUE),
+    (15, '1MP22CS013', TRUE),
+    (16, '1MP22CS031', TRUE),
+    (16, '1MP22CS060', FALSE),
+    (16, '1MP22CS003', TRUE),
+    (16, '1MP22CS039', TRUE),
+    (16, '1MP22CS029', TRUE),
+    (16, '1MP22CS032', FALSE),
+    (16, '1MP22CS042', FALSE),
+    (16, '1MP22CS008', TRUE),
+    (16, '1MP22CS013', TRUE),
+    (17, '1MP22CS031', TRUE),
+    (17, '1MP22CS060', FALSE),
+    (17, '1MP22CS003', FALSE),
+    (17, '1MP22CS039', TRUE),
+    (17, '1MP22CS029', TRUE),
+    (17, '1MP22CS032', FALSE),
+    (17, '1MP22CS042', FALSE),
+    (17, '1MP22CS008', TRUE),
+    (17, '1MP22CS013', FALSE),
+    (18, '1MP22CS031', TRUE),
+    (18, '1MP22CS060', TRUE),
+    (18, '1MP22CS003', FALSE),
+    (18, '1MP22CS039', TRUE),
+    (18, '1MP22CS029', TRUE),
+    (18, '1MP22CS032', TRUE),
+    (18, '1MP22CS042', FALSE),
+    (18, '1MP22CS008', TRUE),
+    (18, '1MP22CS013', TRUE);
+
+-- ADA_01
+INSERT INTO
+    L1_STUDENTS_ATTEND (class_id, usn, attendance)
+VALUES
+    (9, '1MP22CS031', TRUE),
+    (9, '1MP22CS060', FALSE),
+    (9, '1MP22CS003', TRUE),
+    (9, '1MP22CS039', TRUE),
+    (9, '1MP22CS029', TRUE),
+    (9, '1MP22CS032', FALSE),
+    (9, '1MP22CS042', TRUE),
+    (9, '1MP22CS008', TRUE),
+    (9, '1MP22CS013', TRUE),
+    (10, '1MP22CS031', FALSE),
+    (10, '1MP22CS060', TRUE),
+    (10, '1MP22CS003', FALSE),
+    (10, '1MP22CS039', TRUE),
+    (10, '1MP22CS029', TRUE),
+    (10, '1MP22CS032', TRUE),
+    (10, '1MP22CS042', FALSE),
+    (10, '1MP22CS008', TRUE),
+    (10, '1MP22CS013', TRUE),
+    (11, '1MP22CS031', TRUE),
+    (11, '1MP22CS060', FALSE),
+    (11, '1MP22CS003', FALSE),
+    (11, '1MP22CS039', TRUE),
+    (11, '1MP22CS029', TRUE),
+    (11, '1MP22CS032', FALSE),
+    (11, '1MP22CS042', FALSE),
+    (11, '1MP22CS008', TRUE),
+    (11, '1MP22CS013', TRUE),
+    (12, '1MP22CS031', TRUE),
+    (12, '1MP22CS060', FALSE),
+    (12, '1MP22CS003', FALSE),
+    (12, '1MP22CS039', TRUE),
+    (12, '1MP22CS029', TRUE),
+    (12, '1MP22CS032', FALSE),
+    (12, '1MP22CS042', FALSE),
+    (12, '1MP22CS008', TRUE),
+    (12, '1MP22CS013', FALSE),
+    (13, '1MP22CS031', TRUE),
+    (13, '1MP22CS060', TRUE),
+    (13, '1MP22CS003', TRUE),
+    (13, '1MP22CS039', TRUE),
+    (13, '1MP22CS029', TRUE),
+    (13, '1MP22CS032', TRUE),
+    (13, '1MP22CS042', FALSE),
+    (13, '1MP22CS008', TRUE),
+    (13, '1MP22CS013', TRUE);
+
+-- DBMS_02
+INSERT INTO
+    L1_STUDENTS_ATTEND (class_id, usn, attendance)
+VALUES
+    (20, '1MP22AI039', TRUE),
+    (20, '1MP22AI049', TRUE),
+    (20, '1MP22AI059', TRUE),
+    (21, '1MP22AI039', TRUE),
+    (21, '1MP22AI049', FALSE),
+    (21, '1MP22AI059', TRUE),
+    (22, '1MP22AI039', FALSE),
+    (22, '1MP22AI049', TRUE),
+    (22, '1MP22AI059', TRUE);
+
+-- IA_1 Test Marks
+-- IA_1 FOR ADA_01
+INSERT INTO
+    L1_STUDENTS_MARKS (test_id, usn, marks)
+VALUES
+    (1, '1MP22CS031', 47),
+    (1, '1MP22CS060', 48),
+    (1, '1MP22CS003', 49),
+    (1, '1MP22CS039', 43),
+    (1, '1MP22CS029', 47),
+    (1, '1MP22CS032', 50),
+    (1, '1MP22CS042', 50),
+    (1, '1MP22CS008', 49),
+    (1, '1MP22CS013', 50);
+
+-- IA_1 FOR MC_01
+INSERT INTO
+    L1_STUDENTS_MARKS (test_id, usn, marks)
+VALUES
+    (2, '1MP22CS031', 44),
+    (2, '1MP22CS060', 43),
+    (2, '1MP22CS003', 46),
+    (2, '1MP22CS039', 47),
+    (2, '1MP22CS029', 50),
+    (2, '1MP22CS032', 47),
+    (2, '1MP22CS042', 43),
+    (2, '1MP22CS008', 50),
+    (2, '1MP22CS013', 50);
+
+-- IA_1 FOR DBMS_01
+INSERT INTO
+    L1_STUDENTS_MARKS (test_id, usn, marks)
+VALUES
+    (3, '1MP22CS031', 46),
+    (3, '1MP22CS060', 47),
+    (3, '1MP22CS003', 48),
+    (3, '1MP22CS039', 49),
+    (3, '1MP22CS029', 50),
+    (3, '1MP22CS032', 50),
+    (3, '1MP22CS042', 47),
+    (3, '1MP22CS008', 46),
+    (3, '1MP22CS013', 57);
+
+-- IA_1 FOR DBMS_02
+INSERT INTO
+    L1_STUDENTS_MARKS (test_id, usn, marks)
+VALUES
+    (4, '1MP22AI039', 47),
+    (4, '1MP22AI049', 49),
+    (4, '1MP22AI059', 50);
+
+-- Announcements
+SET
+    timezone = 'Asia/Calcutta';
+
+INSERT INTO
+    L1_ANNOUNCEMENT (branch_id, announcement_message)
+VALUES
+    (
+        'cse',
+        'Submit your DBMS record before the deadline - 31st July, 2024!'
+    );
+
+INSERT INTO
+    L1_ANNOUNCEMENT (branch_id, announcement_message)
+VALUES
+    (
+        'cse',
+        'Submit your ADA assignment before the deadline - 27th July, 2024!'
+    );
+
+INSERT INTO
+    L1_ANNOUNCEMENT (branch_id, announcement_message)
+VALUES
+    (
+        'aiml',
+        'Everyone should give a PPT Presentation on their DBMS project on 25th July, 2024!'
+    );
+
+INSERT INTO
+    L1_ANNOUNCEMENT (branch_id, announcement_message)
+VALUES
+    (
+        'all',
+        'Everyone should attend Technical Fest - "Nano Coders" on 23th July, 2024, without Fail!'
+    );
+
+

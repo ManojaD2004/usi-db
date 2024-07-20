@@ -10,9 +10,9 @@ WHERE
 
 SELECT
     (
-        CAST(COUNT(*) as NUMERIC) / (
+        CAST(COUNT(*) AS NUMERIC) / (
             SELECT
-                CAST(total_class as NUMERIC)
+                CAST(total_class AS NUMERIC)
             FROM
                 L1_SUBJECTS
             WHERE
@@ -26,3 +26,16 @@ WHERE
     A.usn = '1MP22CS031'
     AND C.subject_id = 'BCS403_01'
     AND A.attendance = TRUE;
+
+SELECT
+    COUNT(SM.test_id),
+    SUM(SM.marks),
+    S.usn,
+    S.branch_id
+FROM
+    L1_STUDENTS_MARKS AS SM
+    LEFT JOIN L1_STUDENTS AS S ON SM.usn = S.usn
+GROUP BY
+    S.usn
+ORDER BY
+    sum DESC;
