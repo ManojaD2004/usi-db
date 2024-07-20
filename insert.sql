@@ -532,4 +532,20 @@ VALUES
         'Everyone should attend Technical Fest - "Nano Coders" on 23th July, 2024, without Fail!'
     );
 
+-- Map Email Id To Usn 
+INSERT INTO
+    L1_EMAIL_TO_USN (email_id, usn)
+VALUES
+    ('1mp22cs031@usi.ac.in', '1MP22CS031'),
+    ('1mp22cs060@usi.ac.in', '1MP22CS060'),
+    ('1mp22cs003@usi.ac.in', '1MP22CS003'),
+    ('1mp22cs039@usi.ac.in', '1MP22CS039'),
+    ('1mp22cs029@usi.ac.in', '1MP22CS029'),
+    ('1mp22cs032@usi.ac.in', '1MP22CS032'),
+    ('1mp22cs042@usi.ac.in', '1MP22CS042'),
+    ('1mp22cs008@usi.ac.in', '1MP22CS008'),
+    ('1mp22cs013@usi.ac.in', '1MP22CS013'),
+    ('1mp22ai039@usi.ac.in', '1MP22AI039'),
+    ('1mp22ai049@usi.ac.in', '1MP22AI049'),
+    ('1mp22ai059@usi.ac.in', '1MP22AI059');
 
