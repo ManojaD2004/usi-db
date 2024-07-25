@@ -593,45 +593,81 @@ INSERT INTO L2_CLASSES (
     CLASS_TIME
 ) VALUES (
     1,
-    'BCS403_01',
-    '2024-07-01',
-    '09:00:00'
-),
-(
-    2,
-    'BCS403_01',
-    '2024-07-02',
-    '09:00:00'
-),
-(
-    3,
-    'BCS403_01',
-    '2024-07-02',
-    '10:00:00'
-),
-(
-    4,
-    'BCS403_01',
-    '2024-07-03',
-    '11:15:00'
-),
-(
     5,
-    'BCS403_01',
-    '2024-07-07',
-    '13:15:00'
-),
-(
+    TO_DATE('07/01/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('01-JUL-24 09:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
+    2,
+    5,
+    TO_DATE('07/02/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('02-JUL-24 09:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
+    3,
+    5,
+    TO_DATE('07/02/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('02-JUL-24 10:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
+    4,
+    5,
+    TO_DATE('07/03/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('03-JUL-24 11:15:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
+    5,
+    5,
+    TO_DATE('07/07/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('07-JUL-24 13:15:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     6,
-    'BCS403_01',
-    '2024-07-08',
-    '09:00:00'
-),
-(
+    5,
+    TO_DATE('07/08/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('08-JUL-24 09:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     7,
-    'BCS403_01',
-    '2024-07-09',
-    '10:00:00'
+    5,
+    TO_DATE('07/09/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('09-JUL-24 10:00:00', 'DD-MON-YY HH24:MI:SS')
 );
 
 -- ADA_05
@@ -639,42 +675,66 @@ UPDATE L2_SUBJECTS
 SET
     TOTAL_CLASS = 5
 WHERE
-    SUBJECT_ID = 'BCS401_01';
+    SUBJECT_ID = 7;
 
 INSERT INTO L2_CLASSES (
     CLASS_NO,
     SUBJECT_ID,
-    DATE,
-    TIME
+    CLASS_DATE,
+    CLASS_TIME
 ) VALUES (
     1,
-    'BCS401_01',
-    '2024-07-01',
-    '10:00:00'
-),
-(
+    7,
+    TO_DATE('07/01/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('01-JUL-24 10:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     2,
-    'BCS401_01',
-    '2024-07-02',
-    '12:15:00'
-),
-(
+    7,
+    TO_DATE('07/02/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('02-JUL-24 12:15:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     3,
-    'BCS401_01',
-    '2024-07-03',
-    '14:00:00'
-),
-(
+    7,
+    TO_DATE('07/03/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('03-JUL-24 14:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     4,
-    'BCS401_01',
-    '2024-07-04',
-    '10:00:00'
-),
-(
+    7,
+    TO_DATE('07/04/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('04-JUL-24 10:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     5,
-    'BCS401_01',
-    '2024-07-07',
-    '12:15:00'
+    7,
+    TO_DATE('07/07/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('07-JUL-24 12:15:00', 'DD-MON-YY HH24:MI:SS')
 );
 
 -- MC_05
@@ -682,42 +742,66 @@ UPDATE L2_SUBJECTS
 SET
     TOTAL_CLASS = 5
 WHERE
-    SUBJECT_ID = 'BCS402_01';
+    SUBJECT_ID = 8;
 
 INSERT INTO L2_CLASSES (
     CLASS_NO,
     SUBJECT_ID,
-    DATE,
-    TIME
+    CLASS_DATE,
+    CLASS_TIME
 ) VALUES (
     1,
-    'BCS402_01',
-    '2024-07-04',
-    '14:00:00'
-),
-(
+    8,
+    TO_DATE('07/04/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('04-JUL-24 14:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     2,
-    'BCS402_01',
-    '2024-07-05',
-    '12:15:00'
-),
-(
+    8,
+    TO_DATE('07/05/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('05-JUL-24 12:15:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     3,
-    'BCS402_01',
-    '2024-07-07',
-    '14:00:00'
-),
-(
+    8,
+    TO_DATE('07/07/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('07-JUL-24 14:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     4,
-    'BCS402_01',
-    '2024-07-09',
-    '09:00:00'
-),
-(
+    8,
+    TO_DATE('07/09/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('09-JUL-24 09:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     5,
-    'BCS402_01',
-    '2024-07-09',
-    '10:00:00'
+    8,
+    TO_DATE('07/09/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('09-JUL-24 10:00:00', 'DD-MON-YY HH24:MI:SS')
 );
 
 -- DBMS_02_03
@@ -725,38 +809,50 @@ UPDATE L2_SUBJECTS
 SET
     TOTAL_CLASS = 3
 WHERE
-    SUBJECT_ID = 'BCS403_02';
+    SUBJECT_ID = 6;
 
 INSERT INTO L2_CLASSES (
     CLASS_NO,
     SUBJECT_ID,
-    DATE,
-    TIME
+    CLASS_DATE,
+    CLASS_TIME
 ) VALUES (
     1,
-    'BCS403_02',
-    '2024-07-04',
-    '09:00:00'
-),
-(
+    6,
+    TO_DATE('07/04/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('04-JUL-24 09:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     2,
-    'BCS403_02',
-    '2024-07-05',
-    '10:00:00'
-),
-(
+    6,
+    TO_DATE('07/05/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('05-JUL-24 10:00:00', 'DD-MON-YY HH24:MI:SS')
+);
+
+INSERT INTO L2_CLASSES (
+    CLASS_NO,
+    SUBJECT_ID,
+    CLASS_DATE,
+    CLASS_TIME
+) VALUES (
     3,
-    'BCS403_02',
-    '2024-07-07',
-    '14:00:00'
+    6,
+    TO_DATE('07/07/2024', 'MM/DD/YYYY'),
+    TO_TIMESTAMP('07-JUL-24 14:00:00', 'DD-MON-YY HH24:MI:SS')
 );
 
 -- IA 1 Test
 INSERT INTO L2_TESTS (
     TEST_CODE,
     SUBJECT_ID,
-    DATE,
-    TIME,
+    TEST_DATE,
+    TEST_TIME,
     TOTAL_MARKS
 ) VALUES (
     'IA_1',
